@@ -10,8 +10,15 @@
 		['SegStartPosX', '', 1.0, 0.0, '', False], 
 		['SegStartPosY', '', 1.0, 0.0, '', False], 
 		['CueType', '', 1.0, 0.0, '', True], 
-		['handfdbk', '', 1.0, 0.0, '', True]]</analog_inputs>
-	<blocktable>[['1,2,3', 1, '', False, 5]]</blocktable>
+		['handfdbk', '', 1.0, 0.0, '', True], 
+		['ACH11', '', 1.0, 0.0, '', False], 
+		['ACH12', '', 1.0, 0.0, '', False], 
+		['ACH13', '', 1.0, 0.0, '', False], 
+		['ACH14', '', 1.0, 0.0, '', False], 
+		['ACH15', '', 1.0, 0.0, '', False]]</analog_inputs>
+	<blocktable>[['3', 5, '', False, 0], 
+		['2', 5, '', False, 0], 
+		['1', 5, '', False, 1]]</blocktable>
 	<code>''</code>
 	<data_rate>1000</data_rate>
 	<description>''</description>
@@ -19,36 +26,52 @@
 	<gaze_feedback_mode>0</gaze_feedback_mode>
 	<instructions>''</instructions>
 	<instructions_default>u''</instructions_default>
-	<last_modified>'2021-06-25  03:40 PM'</last_modified>
+	<last_modified>'2021-10-26  01:12 PM'</last_modified>
 	<loadtable>[]</loadtable>
 	<loadtable_defs>[]</loadtable_defs>
 	<name>'Test'</name>
 	<pause_behaviour>0</pause_behaviour>
 	<random_seed>1</random_seed>
 	<targetfor_ep>('Handle', ['Active', 0, -44], True)</targetfor_ep>
-	<targetfor_exo>['Fingertip', ['Active', 30, 90], True]</targetfor_exo>
-	<targettable>[[0.0, 0.0, 2.0, '000255000', '0', 0.2, 4.0], 
-		[0.0, 15.0, 1.5, '255000000', '0', 0.1, 1.5], 
-		[0.0, 0.0, 0.75, '128128255', '128128255', 0.0, 0.75], 
-		[0.0, 0.0, 0.0, '000255255', '000255255', 0.0, 0.0], 
+	<targetfor_exo>['Shoulder Midpoint', ['None'], True]</targetfor_exo>
+	<targettable>[[0.0, 40.0, 2.0, '000255000', '0', 0.2, 4.0], 
+		[0.0, 55.0, 1.5, '255000000', '0', 0.1, 1.5], 
+		[0.0, 40.0, 0.75, '128128255', '128128255', 0.0, 0.75], 
+		[0.0, 40.0, 0.0, '000255255', '000255255', 0.0, 0.0], 
+		[0.0, 40.0, 1.0, '000000255', '0', 0.0, 0.0], 
 		[0.0, 0.0, 0.0, '0', '0', 0.0, 0.0], 
 		[0.0, 0.0, 0.0, '0', '0', 0.0, 0.0], 
 		[0.0, 0.0, 0.0, '0', '0', 0.0, 0.0], 
 		[0.0, 0.0, 0.0, '0', '0', 0.0, 0.0], 
 		[0.0, 0.0, 0.0, '0', '0', 0.0, 0.0], 
-		[0.0, 0.0, 0.0, '0', '0', 0.0, 0.0], 
-		[5.0, 7.5, 0.0, '0', '0', 0.0, 0.0], 
-		[-5.0, 7.5, 0.0, '0', '0', 0.0, 0.0]]</targettable>
+		[0.5, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[-0.5, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[1.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[-1.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[2.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[-2.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[3.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[-3.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[4.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[-4.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[5.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[-5.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[6.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[-6.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[7.0, 47.5, 0.0, '0', '0', 0.0, 0.0], 
+		[-7.0, 47.5, 0.0, '0', '0', 0.0, 0.0]]</targettable>
 	<targettable_defs>[['X', 'float'], ['Y', 'float'], ['Visual Radius', 'float'], ['Initial Color', 'colour'], ['Movement Color', 'colour'], ['Stroke Width', 'float'], ['Logical Radius', 'float']]</targettable_defs>
 	<tasklevelparams>[['K_HAND_TARGET', '4'], 
 		['K_HOLDTIME', '1200'], 
+		['K_ARC_FDBK_TARGET', '5'], 
 		['K_ROBOT_RAMP_TIME', '400'], 
-		['K_HAND_VEL', '0.02'], 
-		['K_TIME_TO_START', '1200']]</tasklevelparams>
-	<tasklevelparams_defs>[['K_HAND_VEL', 'float'], ['K_HOLDTIME', 'integer'], ['K_ROBOT_RAMP_TIME', 'integer'], ['K_TIME_TO_START', 'integer'], ['K_HAND_TARGET', 'integer']]</tasklevelparams_defs>
-	<tptable>[[1, 600, 2, 3, 0, 0, 1, 11, 2, 0, 12, 2, 1600, 3000, 500, 1200, 200], 
-		[1, 600, 2, 3, 0, 1, 1, 11, 2, 0, 12, 2, 1600, 3000, 500, 1200, 200], 
-		[1, 600, 2, 3, 0, 2, 1, 11, 2, 0, 12, 2, 1600, 3000, 500, 1200, 200]]</tptable>
+		['K_TIME_TO_START', '1500'], 
+		['K_HAND_VEL', '0.05'], 
+		['K_MIDPOINT_Y', '0.37']]</tasklevelparams>
+	<tasklevelparams_defs>[['K_HAND_VEL', 'float'], ['K_HOLDTIME', 'integer'], ['K_ROBOT_RAMP_TIME', 'integer'], ['K_TIME_TO_START', 'integer'], ['K_HAND_TARGET', 'integer'], ['K_MIDPOINT_Y', 'float'], ['K_ARC_FDBK_TARGET', 'integer']]</tasklevelparams_defs>
+	<tptable>[[1, 600, 2, 3, 0, 0, 1, 25, 2, 0, 26, 2, 1600, 10000, 2000, 2000, 200, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+		[1, 600, 2, 3, 0, 1, 1, 11, 2, 0, 12, 2, 1600, 10000, 2000, 2000, 200, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], 
+		[1, 600, 2, 3, 0, 2, 1, 11, 2, 0, 12, 2, 1600, 10000, 2000, 2000, 200, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]</tptable>
 	<tptable_defs>[['Start Target', 'target'], ['Wait Time in Start', 'int'], ['Reach Target', 'target'], ['Vision Cue Target', 'target'], ['Hand Visible', 'int'], ['Cue Type', 'int'], ['Control Point 0', 'int'], ['Visual Control Point 1', 'int'], ['Visual Control Point 2', 'int'], ['Control Point 3', 'int'], ['Proprio Control Point 1', 'int'], ['Proprio Control Point 2', 'int'], ['Stimulus Duration', 'int'], ['Reach Time', 'int'], ['Holding Time', 'int'], ['Feedback Time', 'int'], ['Post-Trial Delay', 'int']]</tptable_defs>
 	<use_repeat_trial_flag>0</use_repeat_trial_flag>
 	<version>3.8</version>
